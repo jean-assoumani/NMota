@@ -1,0 +1,70 @@
+@import "variables";
+@import "fonts";
+
+// Réinitialisation générale
+// Supprime les marges, paddings et bordures pour uniformiser le rendu des navigateurs.
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+// Styles principaux pour la structure de la page
+// Mise en place de la flexibilité et du centrage des éléments avec une largeur maximale.
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1980px;
+  width: 100%;
+  background-color: $blanc;
+}
+
+// Réinitialisation des listes
+// Supprime les puces et numéros des listes.
+
+ol,
+ul {
+  list-style: none;
+}
+
+// Réinitialisation des liens
+// Supprime les styles par défaut et applique un curseur pointeur.
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+// Styles pour les blocs de page
+// Largeur adaptable avec padding responsive.
+
+.bloc-page {
+  width: 80%;
+  padding: 0 10%;
+}
+
+// Styles spécifiques pour les titres H1
+// Application de la police "SpaceMono" avec ajustements responsifs.
+
+h1 {
+  font-family: "SpaceMonoRegular";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 65px;
+
+  // Adaptation pour les écrans plus petits
+  @media screen and (max-width: 1000px) {
+    font-size: 46px;
+    text-align: center;
+    width: 100%;
+  }
+}

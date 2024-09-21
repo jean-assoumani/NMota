@@ -1,0 +1,125 @@
+// Styles de la structure principale du site
+// Configuration de la disposition, du centrage et de la largeur maximale du site.
+
+.site-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
+  background-color: $blanc;
+  min-height: 100vh;
+}
+
+// Styles de base pour le corps du document
+// Mise en place de la typographie générale, du lissage des polices et du box-sizing global.
+
+body {
+  font-family: "SpaceMonoRegular", sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  padding: 0;
+  background-color: $blanc;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Application du box-sizing sur tous les éléments
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Mise en page des sections principales
+// Application des marges et des largeurs pour le header, le footer et le contenu.
+
+.header,
+.footer,
+.content {
+  width: 100%;
+  max-width: 1920px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+// Style spécifique pour le contenu de la page
+// Flexibilité pour s'adapter à la hauteur minimale de la page.
+
+.content {
+  flex: 1;
+  min-height: calc(100vh - 160px);
+}
+
+// Style des titres de page
+// Configuration des titres avec typographie, centrage et marges.
+
+.page h1 {
+  font-family: "SpaceMonoItalic", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 120px 0;
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $noir;
+
+  // Adaptation des titres pour les petits écrans
+  @media screen and (max-width: 768px) {
+    font-size: 46px;
+    padding: 120px 0 30px;
+  }
+}
+
+// Style générique pour tous les titres (h1 à h6)
+// Utilisation de la police SpaceMonoBoldItalic pour uniformiser les titres.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SpaceMonoBoldItalic", sans-serif;
+  font-size: 96px;
+  line-height: 1.2;
+}
+
+// Style de base pour les liens
+// Suppression de la décoration et ajout d'une transition fluide pour la couleur.
+
+a {
+  text-decoration: none;
+  color: $noir;
+  transition: color 0.3s ease;
+}
+
+// Style de base pour les images
+// Garantit que les images ne dépassent jamais la largeur du conteneur.
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Adaptation pour les petits écrans
+// Ajuste la typographie et les marges pour des tailles d'écran plus petites.
+
+@media (max-width: 768px) {
+  .site-header,
+  .site-main,
+  .site-footer {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .header,
+  .footer,
+  .content {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+}

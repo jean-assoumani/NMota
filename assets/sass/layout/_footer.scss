@@ -1,0 +1,91 @@
+// Styles principaux pour le footer
+// Utilisation de Flexbox pour un affichage adaptatif et centré.
+
+.site-footer {
+  background-color: $blanc;
+  padding: 10px 0;
+  //margin: 40px 0;
+  border-top: 1px solid $noir;
+
+  // Conteneur principal du footer
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; // Adaptation pour éviter la surcharge sur petits écrans
+    margin: 120px 0;
+  }
+
+  // Section de navigation contenant le menu et les informations
+  .footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; // Largeur maximale pour centrage sur grands écrans
+    padding: 0 20px;
+    flex-wrap: wrap; // Menu s'adapte aux petits écrans
+  }
+
+  // Menu de navigation dans le footer
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; // Espacement entre les éléments du menu
+    flex-wrap: wrap; // Réorganisation sur plusieurs lignes pour petits écrans
+
+    li {
+      display: inline;
+
+      // Liens du menu avec styles
+      a {
+        font-family: "SpaceMonoRegular", sans-serif;
+        color: $noir;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 10px 10px;
+
+        &:hover {
+          color: $rouge-primaire; // Changement de couleur au survol
+        }
+      }
+    }
+  }
+
+  // Texte de copyright sous le menu de navigation
+  .footer-copyright {
+    font-family: "SpaceMonoRegular", sans-serif;
+    color: $noir;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    white-space: nowrap; // Garde le texte sur une seule ligne
+    padding: 0 0 0 20px; // Espacement ajusté
+  }
+
+  // Media queries pour gestion des petits écrans (max 768px)
+  @media (max-width: 768px) {
+    // Navigation en colonne pour un meilleur affichage mobile
+    .footer-navigation {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    // Réorganisation du menu en colonne sur petits écrans
+    .footer-menu {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px; // Espacement réduit pour affichage plus compact
+    }
+
+    // Ajustements du style du copyright sur petits écrans
+    .footer-copyright {
+      margin-top: 10px; // Ajout d'espace entre le menu et le copyright
+      padding: 0; // Retrait des marges latérales
+    }
+  }
+}

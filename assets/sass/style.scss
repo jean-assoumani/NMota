@@ -1,0 +1,18 @@
+/* Base 
+   Initialisation des styles de base et variables globales */
+
+@import "base/reset";
+@import "base/variables";
+@import "base/fonts";
+@import "base/global";
+
+/* Layout 
+         Structure du site (Header et Footer) */
+
+@import "layout/header";
+@import "layout/footer";
+
+/* Components
+      Composants réutilisables */
+
+@import "components/mobile-menu";

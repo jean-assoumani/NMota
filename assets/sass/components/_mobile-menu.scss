@@ -1,0 +1,48 @@
+// Styles de base pour le menu mobile
+// Configuration de l'apparence et des transitions pour une expérience fluide et centrée.
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: $rouge-primaire;
+  z-index: 999;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.active {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  // Styles pour la liste de navigation à l'intérieur du menu
+  // Centrage vertical et horizontal des éléments de navigation.
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 20px 0;
+
+      a {
+        font-family: "SpaceMonoRegular", sans-serif;
+        font-size: 44px;
+        text-transform: uppercase;
+        color: $blanc;
+        text-decoration: none;
+      }
+    }
+  }
+}

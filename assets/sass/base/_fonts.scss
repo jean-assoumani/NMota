@@ -1,0 +1,77 @@
+// Déclarations des polices SpaceMono
+// Configurations des variantes normales, gras, italique et gras italique.
+
+@font-face {
+  font-family: "SpaceMonoRegular";
+  src: url("/wp-content/themes/nmota/assets/fonts/space_mono/SpaceMono-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMonoBold";
+  src: url("/wp-content/themes/nmota/assets/fonts/space_mono/SpaceMono-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMonoItalic";
+  src: url("/wp-content/themes/nmota/assets/fonts/space_mono/SpaceMono-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMonoBoldItalic";
+  src: url("/wp-content/themes/nmota/assets/fonts/space_mono/SpaceMono-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Déclarations des polices Poppins
+// Configurations des variantes régulières, médium, gras et italique.
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("/wp-content/themes/nmota/assets/fonts/poppins/Poppins-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("/wp-content/themes/nmota/assets/fonts/poppins/Poppins-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("/wp-content/themes/nmota/assets/fonts/poppins/Poppins-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("/wp-content/themes/nmota/assets/fonts/poppins/Poppins-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
