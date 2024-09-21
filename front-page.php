@@ -14,6 +14,17 @@
         <?php get_template_part('template-parts/hero'); ?>
     </section>
 
+    <!--
+  Affichage de la galerie de photos (Gallery Section)
+  Appel du template-part dédié à la galerie.
+-->
+
+    <section class="gallery-section">
+        <?php get_template_part('template-parts/gallery-grid'); ?>
+    </section>
+
+</main>
+
 </main>
 
 <?php get_footer(); ?>
