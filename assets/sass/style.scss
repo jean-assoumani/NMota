@@ -12,8 +12,15 @@
 @import "layout/header";
 @import "layout/footer";
 
+/* Sections
+      Blocs principaux de contenu */
+
+@import "sections/single-photo";
+@import "sections/thumbnail";
+
 /* Components
       Composants réutilisables */
 
 @import "components/mobile-menu";
+@import "components/button";
 @import "components/contact-modal";

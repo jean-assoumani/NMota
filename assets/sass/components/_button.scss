@@ -1,0 +1,53 @@
+// Style de base pour tous les boutons
+// Configuration des dimensions, typographie et interaction des boutons du site.
+
+.btn {
+  font-family: "SpaceMonoRegular", monospace, sans-serif;
+  font-size: 13px;
+  width: 263px;
+  height: 50px;
+  background-color: $gris-medium;
+  color: $noir;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Style au survol
+// Change la couleur de fond et du texte pour améliorer la visibilité.
+
+.btn:hover {
+  background-color: darken($noir, 10%);
+  color: $blanc;
+}
+
+// Style en focus
+// Améliore l'accessibilité avec un contour visible.
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px lighten($gris-medium, 20%);
+}
+
+// Style pour l'état désactivé
+// Indique l'indisponibilité visuelle avec des couleurs plus ternes.
+
+.btn:disabled {
+  background-color: $gris-light;
+  border: 1px solid $gris-fonce;
+  cursor: not-allowed;
+  color: darken($gris-fonce, 20%);
+}
+
+// Désactive l'effet hover sur les boutons désactivés
+// Aucune modification visuelle au survol pour les boutons inactifs.
+
+.btn:disabled:hover {
+  background-color: $gris-light;
+  color: darken($gris-fonce, 20%);
+}

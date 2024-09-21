@@ -19,6 +19,8 @@ function nmota_enqueue_scripts()
     // Inclusion de scripts spécifiques du thème
     wp_enqueue_script('nmota-menu-toggle', get_template_directory_uri() . '/assets/js/menu-toggle.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('contact-modal-script', get_template_directory_uri() . '/assets/js/contact-modal.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('thumbnails', get_template_directory_uri() . '/assets/js/thumbnails.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('ref-photo', get_template_directory_uri() . '/assets/js/ref-photo.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'nmota_enqueue_scripts');
 

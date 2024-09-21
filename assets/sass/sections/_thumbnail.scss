@@ -1,0 +1,57 @@
+// Aperçu de la vignette au survol
+// Configuration des dimensions et de l'affichage pour les vignettes de navigation.
+
+#photo-thumbnail-preview {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+// Conteneur des liens de navigation
+// Positionnement relatif pour gérer les vignettes au survol.
+
+.navigation-links {
+  position: relative;
+}
+
+// Affichage des vignettes au survol des liens de navigation
+// La vignette s'affiche au survol des liens de navigation précédents et suivants.
+
+.navigation-links .prev-photo:hover + #photo-thumbnail-preview,
+.navigation-links .next-photo:hover + #photo-thumbnail-preview {
+  display: block;
+}
+
+// Style général des vignettes
+// Mise en place des dimensions, du positionnement et des bordures pour les vignettes.
+
+.photo-thumbnail {
+  position: absolute;
+  width: 81px;
+  height: 81px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+// Vignette pour la photo précédente
+// Positionnement relatif à la photo précédente.
+
+.prev-photo .photo-thumbnail {
+  bottom: 100%;
+  left: 48px;
+  transform: translateX(-60%);
+}
+
+// Vignette pour la photo suivante
+// Positionnement relatif à la photo suivante.
+
+.next-photo .photo-thumbnail {
+  bottom: 100%;
+  left: 2px;
+  transform: translateX(-45%);
+}
