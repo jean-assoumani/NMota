@@ -4,7 +4,7 @@
 .site-footer {
   background-color: $blanc;
   padding: 10px 0;
-  //margin: 40px 0;
+  margin: 40px 0;
   border-top: 1px solid $noir;
 
   // Conteneur principal du footer
@@ -13,7 +13,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; // Adaptation pour éviter la surcharge sur petits écrans
-    margin: 120px 0;
   }
 
   // Section de navigation contenant le menu et les informations

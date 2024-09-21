@@ -6,8 +6,8 @@
 @import "base/fonts";
 @import "base/global";
 
-/* Layout 
-         Structure du site (Header et Footer) */
+/* Layout
+      Structure du site (Header et Footer) */
 
 @import "layout/header";
 @import "layout/footer";
@@ -16,3 +16,4 @@
       Composants réutilisables */
 
 @import "components/mobile-menu";
+@import "components/contact-modal";

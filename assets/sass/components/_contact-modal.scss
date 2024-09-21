@@ -1,0 +1,119 @@
+// Styles de base pour la modale de contact
+// Configuration de l'apparence et du positionnement de la modale, ainsi que du comportement d'affichage.
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &.show {
+    display: block;
+  }
+
+  .modal-background {
+    background: url("../../images/website/contact_header.png") repeat-x center 1%;
+    background-size: 885px 106px;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blanc;
+    border: 5px solid $noir;
+    margin: 5% auto;
+    max-width: 597px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 20px 0;
+
+    @media screen and (min-width: 480px) {
+      margin: 10% auto;
+      width: 80% !important;
+    }
+  }
+}
+
+// Styles pour le formulaire WPCF7 intégré dans la modale
+// Mise en forme des champs du formulaire, labels, et bouton de soumission.
+
+.wpcf7-form {
+  max-width: 263px;
+  width: 100%;
+  margin: 12rem 0;
+
+  label {
+    color: $bleu-fonce;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "PoppinsMedium", sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    width: 263px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid $border-input;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 210px;
+  }
+
+  .wpcf7-submit {
+    font-family: "SpaceMonoRegular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    width: 263px;
+    height: 50px;
+    background-color: $gris-medium;
+    color: $noir;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 34px;
+
+    &:hover {
+      background-color: darken($noir, 10%);
+      color: $blanc;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px lighten($gris-medium, 20%);
+    }
+  }
+}
+
+// Message de réponse WPCF7
+// Styles pour les messages de retour d'erreur ou de succès après l'envoi du formulaire.
+
+.wpcf7-response-output {
+  color: $rouge-primaire;
+}
+
+// Réinitialisation de la transformation du texte pour les éléments <span>
+// Annule les transformations de texte par défaut sur les éléments <span>.
+
+span {
+  text-transform: none;
+}
