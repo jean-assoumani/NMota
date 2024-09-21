@@ -14,6 +14,17 @@ Affichage du contenu principal de la page d'accueil avec gestion des articles
     endif;
 
     ?>
+
+    <!-- 
+    Inclusion des sections spécifiques pour la page d'accueil : Hero, filtres et galerie
+    -->
+    <?php
+    if (is_front_page()) {
+        get_template_part('template-parts/hero');
+        get_template_part('template-parts/filter-section');
+        get_template_part('template-parts/gallery-grid');
+    }
+    ?>
 </main>
 
 <!-- 

@@ -10,6 +10,33 @@ function nmota_menus()
 }
 add_action('init', 'nmota_menus');
 
+// Support des fonctionnalités du thème et des éléments HTML5.
+function nmota_supports()
+{
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+
+    // Support du logo personnalisé avec flexibilité de hauteur et largeur
+    add_theme_support('custom-logo', array(
+        'height' => 100,
+        'width' => 400,
+        'flex-height' => true,
+        'flex-width' => true,
+    ));
+
+    // Activation du support des éléments HTML5
+    add_theme_support('html5', array(
+        'comment-list',
+        'comment-form',
+        'search-form',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    ));
+}
+add_action('after_setup_theme', 'nmota_supports');
+
 // Enregistrement des styles et scripts du thème.
 function nmota_enqueue_scripts()
 {
