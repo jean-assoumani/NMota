@@ -1,0 +1,169 @@
+/* =================================================================================
+   Conteneur principal de la lightbox 
+   Ce conteneur englobe toute la lightbox et centre son contenu.
+   ================================================================================= */
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  outline: none;
+}
+
+/* =================================================================================
+     Overlay pour obscurcir le fond 
+     Ce style couvre tout l'écran avec un fond semi-transparent lorsque la lightbox est active.
+     ================================================================================= */
+#lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: none;
+}
+
+/* =================================================================================
+     Conteneur de données 
+     Contient les informations additionnelles comme le titre et la catégorie de l'image.
+     ================================================================================= */
+.lb-dataContainer {
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* =================================================================================
+     Bas de la photo (titre et catégorie) 
+     Contient le titre de la photo et sa catégorie, alignés de manière responsive.
+     ================================================================================= */
+.lb-caption {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0;
+}
+
+/* Alignement et style des textes de titre et catégorie */
+.lb-data,
+.lb-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  padding: 0 2px;
+  margin: 0;
+}
+
+/* Titres et catégories alignés à gauche et à droite respectivement */
+.lb-caption .lightbox-title,
+.lb-caption .lightbox-category {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "SpaceMonoRegular" !important;
+  font-size: 14px;
+}
+
+.lb-caption .lightbox-title {
+  text-align: left;
+  left: 0;
+}
+
+.lb-caption .lightbox-category {
+  text-align: right;
+  right: 0;
+}
+
+/* =================================================================================
+     Masquer le compteur d'images 
+     Ce style cache le compteur d'images pour un affichage plus épuré.
+     ================================================================================= */
+.lb-number {
+  display: none !important;
+}
+
+/* =================================================================================
+     Boutons de navigation 
+     Permettent de naviguer entre les images de la lightbox.
+     ================================================================================= */
+.lb-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Cliquer à travers les zones non actives */
+}
+
+/* Styles communs pour les boutons de navigation précédent/suivant */
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 40px;
+  z-index: 10001;
+  cursor: pointer;
+  background-size: cover;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Réactive les clics sur les boutons */
+}
+
+/* Bouton précédent */
+.lb-nav a.lb-prev {
+  background: url("../../images/lightbox/prev.png") center no-repeat
+    rgba(0, 0, 0, 0.2) !important;
+  left: -180px; /* Ajuster si nécessaire */
+  border-radius: 8px 0 0 8px;
+}
+
+/* Bouton suivant */
+.lb-nav a.lb-next {
+  background: url("../../images/lightbox/next.png") center no-repeat
+    rgba(0, 0, 0, 0.2) !important;
+  right: -180px; /* Ajuster si nécessaire */
+  border-radius: 0 8px 8px 0;
+  margin-right: 0 !important; /* Supprime la marge droite définie précédemment */
+}
+
+/* =================================================================================
+     Conteneur de la lightbox
+     Gère l'organisation des éléments dans la lightbox, alignés verticalement.
+     ================================================================================= */
+.lb-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* =================================================================================
+     Bouton de fermeture 
+     Permet de fermer la lightbox, positionné par rapport au coin supérieur droit.
+     ================================================================================= */
+.lb-closeContainer {
+  position: absolute;
+  top: -90px; /* Ajuster selon l'espacement souhaité */
+  right: 250px; /* Ajuster selon l'espacement souhaité */
+  z-index: 10001;
+}
+
+/* Style du bouton de fermeture */
+.lb-close {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("https://motaphoto.com/wp-content/themes/nmota/assets/images/lightbox/close.png")
+    no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}

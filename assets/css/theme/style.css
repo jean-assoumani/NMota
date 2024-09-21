@@ -506,6 +506,177 @@ img {
     font-size: 3.5rem;
   }
 }
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+}
+
+.filter-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.filter-dropdown select {
+  padding: 8px;
+  border: 1px solid #b8bbc2;
+  font-family: "PoppinsMedium";
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+}
+.filter-dropdown select:hover {
+  background-color: #fe5858;
+  color: #fff;
+}
+.filter-dropdown select:focus {
+  background-color: #fff;
+  color: #000;
+}
+.filter-dropdown option {
+  color: #000;
+}
+
+.filter-container .filter-dropdown:last-child {
+  margin-left: auto;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 260px;
+  cursor: pointer;
+}
+.custom-dropdown:hover {
+  background-color: #fff;
+}
+.custom-dropdown .selected {
+  padding: 10px;
+  padding-right: 30px;
+  border: 1px solid #b8bbc2;
+  border-radius: 8px;
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  height: 42px;
+  z-index: 1;
+}
+.custom-dropdown .selected:hover {
+  background-color: #ffd6d6;
+  color: #000;
+}
+.custom-dropdown .selected:after {
+  content: url("../../images/website/filter_icon_black.svg");
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.custom-dropdown .selected.active:after, .custom-dropdown .selected.option-selected:after {
+  content: url("../../images/website/filter_icon_white.svg");
+  transform: translateY(-50%) rotate(180deg);
+}
+.custom-dropdown .selected.option-selected:after {
+  transform: translateY(-50%);
+}
+.custom-dropdown .selected.option-selected {
+  background-color: #e00000;
+  color: white;
+}
+.custom-dropdown .dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #b8bbc2;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.custom-dropdown .dropdown-options .option {
+  padding: 8px;
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 12px;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 0;
+  position: relative;
+}
+.custom-dropdown .dropdown-options .option:hover {
+  background-color: #fe5858 !important;
+  color: #fff;
+}
+.custom-dropdown .dropdown-options .option:last-child {
+  border-radius: 0 0 8px 8px;
+}
+.custom-dropdown .dropdown-options .option.selected {
+  background-color: #e00000;
+  color: #fff;
+}
+.custom-dropdown .dropdown-options .option.selected:after {
+  display: none;
+}
+.custom-dropdown .dropdown-options .option:hover:after {
+  filter: brightness(0) invert(1);
+}
+.custom-dropdown.active .dropdown-options {
+  display: block;
+}
+.custom-dropdown.active .selected {
+  border-radius: 8px 8px 0 0;
+  border-bottom-color: transparent;
+  z-index: 1;
+}
+
+@media (max-width: 980px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+  }
+  .filter-group-left {
+    margin-bottom: 5px;
+  }
+  .filter-group-left,
+  .filter-group-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-dropdown,
+  .custom-dropdown {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .filter-group-left .custom-dropdown,
+  .filter-group-right .custom-dropdown {
+    margin-right: 0;
+  }
+  .filter-container .filter-dropdown:last-child {
+    margin-left: 0;
+  }
+  .custom-dropdown:last-child {
+    margin-bottom: 0;
+  }
+}
 .gallery-section {
   display: flex;
   flex-direction: column;
@@ -513,7 +684,7 @@ img {
   align-items: center;
   width: 100%;
   background-color: #fff;
-  margin: 30px 0;
+  margin: auto 0;
 }
 .gallery-section .gallery-grid {
   display: grid;
