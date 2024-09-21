@@ -1,0 +1,46 @@
+.wp-block-heading {
+  width: 70%;
+  font-family: "SpaceMonoBoldItalic";
+  font-size: 35px;
+  line-height: 35px;
+  margin: 0 auto 30px;
+}
+
+.page p {
+  width: 70%;
+  font-family: "PoppinsRegular";
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+  margin: 0 auto 30px;
+}
+
+// Media queries pour les écrans de 768px et moins
+@media (max-width: 768px) {
+  .wp-block-heading {
+    width: 90%;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .page p {
+    width: 95%;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+// Media queries pour les écrans de 480px et moins
+@media (max-width: 480px) {
+  .wp-block-heading {
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .page p {
+    width: 100%;
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
