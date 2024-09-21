@@ -1,0 +1,23 @@
+# Masquer les fichiers de log et temporaires
+*.log
+*.tmp
+*.temp
+
+# Masquer les fichiers spécifiques à Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Masquer les fichiers de sauvegarde
+*.bak
+*.backup
+*.sql
+*.sql.gz
+
+# Masquer les fichiers système
+.DS_Store
+
+# Masquer les fichiers .DS_Store dans tous les répertoires
+**/.DS_Store
+
+# Masquer les fichiers système Windows
+Thumbs.db
