@@ -33,3 +33,9 @@
 </div>
 
 <div style="clear: both;"></div>
+
+<!-- Bouton pour charger plus de photos via AJAX -->
+<div class="load-more-container">
+    <button class="btn load-more" data-page="1"
+        data-ajaxurl="<?php echo esc_url(admin_url('admin-ajax.php')); ?>">Charger plus</button>
+</div>
