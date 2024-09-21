@@ -1,0 +1,114 @@
+// Styles de base pour la section Hero
+// Mise en page de la section Hero avec image de fond et texte centré.
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  // Overlay semi-transparent pour améliorer la lisibilité du contenu
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+  }
+
+  // Contenu centré dans la section Hero
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+
+    h1 {
+      line-height: 1.2;
+      font-family: "SpaceMono", monospace, sans-serif;
+      font-size: 96px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-style: italic;
+      color: transparent;
+      -webkit-text-stroke: 2px $blanc;
+      width: 100%;
+    }
+  }
+}
+
+// Écrans larges (≥ 1200px)
+@media (min-width: 1200px) {
+  .hero .hero-content h1 {
+    font-size: 9rem;
+  }
+}
+
+// Écrans entre 1200px et 960px
+@media screen and (max-width: 1200px) {
+  .hero .hero-content h1 {
+    font-size: 7rem;
+  }
+}
+
+// Écrans entre 960px et 768px
+@media screen and (max-width: 960px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero .hero-content h1 {
+    margin-top: 6%;
+    font-size: 6.5rem;
+  }
+}
+
+// Écrans entre 768px et 576px
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero .hero-content {
+    margin-top: 4%;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 4.5rem;
+  }
+}
+
+// Écrans entre 576px et 480px
+@media screen and (max-width: 576px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .hero-content h1 {
+    margin-top: 15%;
+    font-size: 3.5rem;
+  }
+}
+
+// Écrans petits (≤ 480px)
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 40vh;
+  }
+
+  .hero .hero-content h1 {
+    margin-top: 15%;
+    font-size: 3.5rem;
+  }
+}

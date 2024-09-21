@@ -70,6 +70,16 @@ Affichage d'une page individuelle pour une photo avec ses informations, interact
         </div>
     </div>
 
+    <!-- 
+    Suggestions de photos liées
+    -->
+    <section class="gallery-section">
+        <div class="related-photo-section">
+            <h3>Vous aimerez aussi</h3>
+        </div>
+        <?php get_template_part('template-parts/related-photo'); ?>
+    </section>
+
 </main>
 
 <?php get_footer(); ?>
